@@ -1,35 +1,24 @@
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 import { CheckCircle, Sparkles } from "lucide-react";
-import { motion } from "motion/react";
+import { useInView } from "../hooks/useInView";
 import image3 from "../assets/3.jpg";
 
 export function AboutOptimized() {
+  const { ref: textRef, isInView: textInView } = useInView();
+  const { ref: imagesRef, isInView: imagesInView } = useInView();
+
   return (
     <section id="about" className="py-24 md:py-32 bg-gradient-to-br from-white via-teal-50/50 to-orange-50/50 relative overflow-hidden">
-      {/* Simplified decorative element - only on desktop */}
+      {/* Simplified decorative element - removed motion.div */}
       <div className="hidden md:block">
-        <motion.div
-          className="absolute top-20 right-10 w-72 h-72 bg-gradient-to-br from-teal-300/30 to-transparent rounded-full blur-3xl"
-          animate={{
-            scale: [1, 1.1, 1],
-            opacity: [0.3, 0.4, 0.3],
-          }}
-          transition={{
-            duration: 6,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-        />
+        <div className="absolute top-20 right-10 w-72 h-72 bg-gradient-to-br from-teal-300/30 to-transparent rounded-full blur-3xl opacity-30" />
       </div>
       
       <div className="container mx-auto px-6 md:px-8 lg:px-12 relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
-          <motion.div
-            initial={{ y: 30, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            viewport={{ once: true, amount: 0.2 }}
-            transition={{ duration: 0.5, ease: [0.25, 0.1, 0.25, 1] }}
-            className=""
+          <div
+            ref={textRef}
+            className={`fade-in-up ${textInView ? 'visible' : ''}`}
           >
             <div className="inline-flex items-center gap-2 mb-6 px-4 py-2 bg-white/80 rounded-full border border-teal-200/50 shadow-lg">
               <Sparkles className="w-4 h-4 text-teal-600" />
@@ -85,14 +74,11 @@ export function AboutOptimized() {
                 </div>
               ))}
             </div>
-          </motion.div>
+          </div>
           
-          <motion.div
-            initial={{ y: 30, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            viewport={{ once: true, amount: 0.2 }}
-            transition={{ duration: 0.5, delay: 0.1, ease: [0.25, 0.1, 0.25, 1] }}
-            className="relative"
+          <div
+            ref={imagesRef}
+            className={`relative fade-in-up stagger-2 ${imagesInView ? 'visible' : ''}`}
           >
             <div className="grid grid-cols-2 gap-4">
               <div className="col-span-2">
@@ -124,7 +110,7 @@ export function AboutOptimized() {
                 <div className="absolute inset-0 bg-gradient-to-t from-green-900/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>
