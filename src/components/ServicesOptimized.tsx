@@ -163,11 +163,11 @@ export function ServicesOptimized() {
                 key={service.id}
                 initial={{ y: 20, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
-                viewport={{ once: true }}
+                viewport={{ once: true, amount: 0.1 }}
                 transition={{ 
-                  duration: 0.4, 
-                  delay: Math.min(index * 0.05, 0.3), // Cap delay at 0.3s
-                  ease: "easeOut" 
+                  duration: 0.5, 
+                  delay: Math.min(index * 0.05, 0.3),
+                  ease: [0.25, 0.1, 0.25, 1] // Custom easing for smoother start
                 }}
                 className={service.span}
               >

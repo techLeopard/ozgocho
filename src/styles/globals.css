@@ -311,3 +311,18 @@ button, a, input, textarea {
     scroll-behavior: auto !important;
   }
 }
+
+/* Fix initial flicker for Motion.js whileInView animations */
+/* This prevents the flash before Motion applies initial styles */
+@media (min-width: 769px) {
+  /* Only on desktop where flicker is visible */
+  section > div > div > div[class*="grid"] > div {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  
+  section > div > div > div[class*="grid"] > div[data-projection-id] {
+    opacity: 1;
+    transform: none;
+  }
+}
