@@ -1,17 +1,17 @@
-import { HeroOptimized } from "./components/HeroOptimized";
-import { About } from "./components/About";
+import { Hero } from "./components/Hero";
+import { AboutOptimized } from "./components/AboutOptimized";
 import { Services } from "./components/Services";
-import { Contact } from "./components/Contact";
+import { ContactOptimized } from "./components/ContactOptimized";
 import { Footer } from "./components/Footer";
 import { Toaster } from "./components/ui/sonner";
 
 export default function App() {
   return (
     <div className="min-h-screen">
-      <HeroOptimized />
-      <About />
+      <Hero />
+      <AboutOptimized />
       <Services />
-      <Contact />
+      <ContactOptimized />
       <Footer />
       <Toaster position="top-center" />
     </div>
