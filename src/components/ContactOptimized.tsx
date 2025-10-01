@@ -24,7 +24,7 @@ export function ContactOptimized() {
       {/* Simplified decorative element - only on desktop */}
       <div className="hidden md:block">
         <motion.div
-          className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-teal-400/20 to-transparent rounded-full blur-3xl gpu-accelerated"
+          className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-teal-400/20 to-transparent rounded-full blur-3xl"
           animate={{
             x: [0, 30, 0],
             y: [0, 20, 0],
@@ -180,7 +180,7 @@ export function ContactOptimized() {
                 
                 <Button 
                   type="submit" 
-                  className="group w-full bg-gradient-to-r from-teal-600 to-teal-700 hover:from-teal-700 hover:to-teal-800 text-white py-7 rounded-xl shadow-xl shadow-teal-500/30 hover:shadow-2xl hover:shadow-teal-500/40 transition-all duration-200 hover:scale-[1.02] gpu-accelerated"
+                  className="group w-full bg-gradient-to-r from-teal-600 to-teal-700 hover:from-teal-700 hover:to-teal-800 text-white py-7 rounded-xl shadow-xl shadow-teal-500/30 hover:shadow-2xl hover:shadow-teal-500/40 transition-all duration-200 hover:scale-[1.02]"
                 >
                   <Send className="mr-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-200" />
                   Отправить заявку

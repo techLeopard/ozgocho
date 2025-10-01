@@ -262,11 +262,11 @@ button, a, input, textarea {
   transition-duration: 0.01ms !important;
 }
 
-/* GPU acceleration for smooth animations */
+/* GPU acceleration for smooth animations - only when needed */
 .gpu-accelerated {
   transform: translateZ(0);
-  will-change: transform, opacity;
   backface-visibility: hidden;
+  /* Removed will-change - Motion handles this automatically */
 }
 
 /* Optimized animation containers */

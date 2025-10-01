@@ -9,7 +9,7 @@ export function AboutOptimized() {
       {/* Simplified decorative element - only on desktop */}
       <div className="hidden md:block">
         <motion.div
-          className="absolute top-20 right-10 w-72 h-72 bg-gradient-to-br from-teal-300/30 to-transparent rounded-full blur-3xl gpu-accelerated"
+          className="absolute top-20 right-10 w-72 h-72 bg-gradient-to-br from-teal-300/30 to-transparent rounded-full blur-3xl"
           animate={{
             scale: [1, 1.1, 1],
             opacity: [0.3, 0.4, 0.3],
@@ -17,6 +17,7 @@ export function AboutOptimized() {
           transition={{
             duration: 6,
             repeat: Infinity,
+            ease: "easeInOut",
           }}
         />
       </div>

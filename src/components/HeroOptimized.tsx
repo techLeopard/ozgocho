@@ -9,7 +9,7 @@ export function HeroOptimized() {
       {/* Simplified floating shapes - only on desktop */}
       <div className="hidden md:block">
         <motion.div
-          className="absolute top-20 right-20 w-64 h-64 bg-gradient-to-br from-teal-400 to-teal-600 rounded-full opacity-20 blur-3xl gpu-accelerated"
+          className="absolute top-20 right-20 w-64 h-64 bg-gradient-to-br from-teal-400 to-teal-600 rounded-full opacity-20 blur-3xl"
           animate={{
             y: [0, -20, 0],
             scale: [1, 1.05, 1],
@@ -21,7 +21,7 @@ export function HeroOptimized() {
           }}
         />
         <motion.div
-          className="absolute bottom-20 left-20 w-80 h-80 bg-gradient-to-br from-orange-400 to-yellow-500 rounded-full opacity-20 blur-3xl gpu-accelerated"
+          className="absolute bottom-20 left-20 w-80 h-80 bg-gradient-to-br from-orange-400 to-yellow-500 rounded-full opacity-20 blur-3xl"
           animate={{
             y: [0, 30, 0],
             scale: [1, 1.1, 1],
