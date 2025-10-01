@@ -56,6 +56,15 @@
       outDir: 'dist',
       assetsDir: 'assets',
       sourcemap: false,
+      rollupOptions: {
+        output: {
+          manualChunks: {
+            vendor: ['react', 'react-dom'],
+            motion: ['motion/react'],
+            ui: ['lucide-react', '@radix-ui/react-slot'],
+          },
+        },
+      },
     },
     server: {
       port: 3000,

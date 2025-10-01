@@ -1,0 +1,154 @@
+/* Mobile Performance Optimizations */
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Optimize animations for mobile devices */
+@media (max-width: 768px) {
+  /* Disable heavy effects on mobile */
+  .backdrop-blur-sm {
+    backdrop-filter: none;
+    background-color: rgba(255, 255, 255, 0.9);
+  }
+  
+  .backdrop-blur {
+    backdrop-filter: none;
+    background-color: rgba(255, 255, 255, 0.95);
+  }
+  
+  /* Reduce shadow complexity */
+  .shadow-xl {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  }
+  
+  .shadow-2xl {
+    box-shadow: 0 8px 12px -2px rgba(0, 0, 0, 0.1), 0 4px 6px -1px rgba(0, 0, 0, 0.06);
+  }
+  
+  /* Optimize transform animations */
+  .transform {
+    will-change: transform;
+    transform: translateZ(0); /* Force hardware acceleration */
+  }
+  
+  /* Reduce animation duration on mobile */
+  .transition-all {
+    transition-duration: 0.2s;
+  }
+  
+  .transition-transform {
+    transition-duration: 0.2s;
+  }
+  
+  .transition-colors {
+    transition-duration: 0.15s;
+  }
+  
+  /* Disable hover effects on touch devices */
+  .hover\:scale-105:hover {
+    transform: none;
+  }
+  
+  .hover\:scale-110:hover {
+    transform: none;
+  }
+  
+  .group-hover\:scale-110:is(:where(.group):hover *) {
+    transform: none;
+  }
+  
+  .group-hover\:rotate-3:is(:where(.group):hover *) {
+    transform: none;
+  }
+  
+  .group-hover\:rotate-12:is(:where(.group):hover *) {
+    transform: none;
+  }
+  
+  /* Simplify gradient animations */
+  .group-hover\:opacity-100:is(:where(.group):hover *) {
+    opacity: 0.5;
+  }
+  
+  /* Reduce blur effects */
+  .blur-2xl {
+    filter: blur(8px);
+  }
+  
+  .blur-xl {
+    filter: blur(4px);
+  }
+}
+
+/* Performance optimizations for all devices */
+.animate-float {
+  will-change: transform;
+  transform: translateZ(0);
+}
+
+.animate-pulse {
+  will-change: opacity;
+}
+
+/* Optimize motion components */
+.motion-safe\:animate-none {
+  animation: none;
+}
+
+.motion-reduce\:animate-none {
+  animation: none;
+}
+
+/* Hardware acceleration for smooth animations */
+.gpu-accelerated {
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+/* Reduce repaints */
+.no-repaint {
+  contain: layout style paint;
+}
+
+/* Optimize images */
+img {
+  will-change: auto;
+}
+
+/* Reduce animation complexity on low-end devices */
+@media (max-width: 480px) {
+  /* Disable most animations on very small screens */
+  .transition-all,
+  .transition-transform,
+  .transition-colors,
+  .transition-opacity {
+    transition: none;
+  }
+  
+  /* Simplify shadows */
+  .shadow-lg,
+  .shadow-xl,
+  .shadow-2xl {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Disable complex transforms */
+  .transform {
+    transform: none;
+  }
+  
+  .group-hover\:scale-110:is(:where(.group):hover *),
+  .group-hover\:rotate-3:is(:where(.group):hover *),
+  .group-hover\:rotate-12:is(:where(.group):hover *) {
+    transform: none;
+  }
+}
