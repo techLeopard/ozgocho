@@ -28,6 +28,7 @@ export function AboutOptimized() {
             viewport={{ once: true }}
             transition={{ duration: 0.4, ease: "easeOut" }}
             className=""
+            data-motion
           >
             <div className="inline-flex items-center gap-2 mb-6 px-4 py-2 bg-white/80 rounded-full border border-teal-200/50 shadow-lg">
               <Sparkles className="w-4 h-4 text-teal-600" />
@@ -91,6 +92,7 @@ export function AboutOptimized() {
             viewport={{ once: true }}
             transition={{ duration: 0.4, delay: 0.1, ease: "easeOut" }}
             className="relative"
+            data-motion
           >
             <div className="grid grid-cols-2 gap-4">
               <div className="col-span-2">
