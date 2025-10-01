@@ -1,17 +1,5 @@
 /* Mobile Performance Optimizations */
 
-/* Reduce motion for users who prefer it */
-@media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
-}
-
 /* Optimize animations for mobile devices */
 @media (max-width: 768px) {
   /* Disable heavy effects on mobile */
@@ -97,26 +85,6 @@
 
 .animate-pulse {
   will-change: opacity;
-}
-
-/* Optimize motion components */
-.motion-safe\:animate-none {
-  animation: none;
-}
-
-.motion-reduce\:animate-none {
-  animation: none;
-}
-
-/* Hardware acceleration for smooth animations */
-.gpu-accelerated {
-  transform: translateZ(0);
-  will-change: transform;
-}
-
-/* Reduce repaints */
-.no-repaint {
-  contain: layout style paint;
 }
 
 /* Optimize images */

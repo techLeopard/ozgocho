@@ -250,25 +250,39 @@ button, a, input, textarea {
   transition-duration: 0.01ms !important;
 }
 
-/* Motion elements will be controlled by Framer Motion */
+/* Optimized animation system */
+.motion-safe {
+  /* Respect user's motion preferences */
+}
 
-/* GPU acceleration for better performance */
+.motion-reduce {
+  /* Disable animations for users who prefer reduced motion */
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.01ms !important;
+}
+
+/* GPU acceleration for smooth animations */
 .gpu-accelerated {
   transform: translateZ(0);
   will-change: transform, opacity;
   backface-visibility: hidden;
-  perspective: 1000px;
 }
 
-/* Smooth animation entrance */
+/* Optimized animation containers */
+.animation-container {
+  contain: layout style paint;
+}
+
+/* Smooth entrance animations */
 .animate-entrance {
-  animation: fadeInUp 0.6s ease-out forwards;
+  animation: fadeInUp 0.4s ease-out forwards;
 }
 
 @keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(20px);
   }
   to {
     opacity: 1;
@@ -276,7 +290,24 @@ button, a, input, textarea {
   }
 }
 
-/* Prevent layout shift during animations */
-.animation-container {
-  contain: layout style paint;
+/* Performance optimizations */
+.optimized-transform {
+  will-change: transform;
+  transform: translateZ(0);
+}
+
+.optimized-opacity {
+  will-change: opacity;
+}
+
+/* Reduce motion for better performance */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }

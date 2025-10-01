@@ -4,7 +4,7 @@ import { motion } from "motion/react";
 
 export function AboutOptimized() {
   return (
-    <section className="py-24 md:py-32 bg-gradient-to-br from-white via-teal-50/50 to-orange-50/50 relative overflow-hidden">
+    <section id="about" className="py-24 md:py-32 bg-gradient-to-br from-white via-teal-50/50 to-orange-50/50 relative overflow-hidden">
       {/* Simplified decorative element - only on desktop */}
       <div className="hidden md:block">
         <motion.div
