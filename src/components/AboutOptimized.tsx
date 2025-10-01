@@ -115,8 +115,8 @@ export function AboutOptimized() {
               
               <div className="relative group overflow-hidden rounded-3xl shadow-2xl">
                 <ImageWithFallback 
-                  src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjaGlsZHJlbiUyMHBsYXlpbmclMjB0b2dldGhlcnxlbnwxfHx8fDE3NTkyOTA0ODF8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-                  alt="Дети играют вместе"
+                  src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxraWRzJTIwa2luZGVyZ2FydGVuJTIwY2xhc3Nyb29tfGVufDF8fHx8MTc1OTI5MDQ4MXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                  alt="Дети в детском саду"
                   className="w-full h-48 object-cover object-center transform group-hover:scale-105 transition-transform duration-300"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-green-900/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
