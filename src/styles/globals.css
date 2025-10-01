@@ -250,9 +250,11 @@ button, a, input, textarea {
   transition-duration: 0.01ms !important;
 }
 
-/* Hide elements before animation starts */
-[data-motion] {
-  opacity: 0;
+/* Hide elements before animation starts - only on mobile */
+@media (max-width: 768px) {
+  [data-motion] {
+    opacity: 0;
+  }
 }
 
 /* GPU acceleration for better performance */
