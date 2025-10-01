@@ -1,6 +1,7 @@
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 import { CheckCircle, Sparkles } from "lucide-react";
 import { motion } from "motion/react";
+import image3 from "../assets/3.jpg";
 
 export function AboutOptimized() {
   return (
@@ -114,11 +115,11 @@ export function AboutOptimized() {
               </div>
               
               <div className="relative group overflow-hidden rounded-3xl shadow-2xl">
-                <ImageWithFallback 
-                  src="/assets/3.jpg"
-                  alt="Дети в детском саду"
-                  className="w-full h-48 object-cover object-center transform group-hover:scale-105 transition-transform duration-300"
-                />
+                  <ImageWithFallback 
+                    src={image3}
+                    alt="Дети в детском саду"
+                    className="w-full h-48 object-cover object-center transform group-hover:scale-105 transition-transform duration-300"
+                  />
                 <div className="absolute inset-0 bg-gradient-to-t from-green-900/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </div>
             </div>
