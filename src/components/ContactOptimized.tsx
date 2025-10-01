@@ -44,7 +44,7 @@ export function ContactOptimized() {
           viewport={{ once: true }}
           transition={{ duration: 0.4, ease: "easeOut" }}
           className="text-center mb-16"
-          data-motion
+          style={{ opacity: 0 }}
         >
           <div className="inline-block mb-4 px-4 py-2 bg-gradient-to-r from-teal-100 to-orange-100 rounded-full">
             <span className="text-sm text-teal-700">Свяжитесь с нами</span>
@@ -64,7 +64,7 @@ export function ContactOptimized() {
             viewport={{ once: true }}
             transition={{ duration: 0.4, ease: "easeOut" }}
             className="flex"
-            data-motion
+            style={{ opacity: 0 }}
           >
             <div className="h-full w-full p-8 md:p-10 rounded-3xl bg-gradient-to-br from-teal-500 to-teal-700 text-white shadow-2xl shadow-teal-500/30 relative overflow-hidden">
               {/* Simplified decorative circles */}
@@ -130,7 +130,7 @@ export function ContactOptimized() {
             viewport={{ once: true }}
             transition={{ duration: 0.4, delay: 0.1, ease: "easeOut" }}
             className=""
-            data-motion
+            style={{ opacity: 0 }}
           >
             <div className="h-full p-8 md:p-10 rounded-3xl bg-white/80 border border-gray-200/50 shadow-2xl flex flex-col">
               <h3 className="mb-8 text-gray-800">

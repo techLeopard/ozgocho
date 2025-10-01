@@ -41,7 +41,7 @@ export function HeroOptimized() {
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
             className="mb-8"
-            data-motion
+            style={{ opacity: 0 }}
           >
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-br from-teal-400 to-orange-400 rounded-full blur-2xl opacity-30" />
@@ -58,7 +58,7 @@ export function HeroOptimized() {
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
             className="mb-4 inline-flex items-center gap-2 px-4 py-2 bg-white/60 rounded-full border border-teal-200/50 shadow-lg"
-            data-motion
+            style={{ opacity: 0 }}
           >
             <Sparkles className="w-4 h-4 text-teal-600" />
             <span className="text-sm text-teal-700">Особое место для особенных детей</span>
@@ -69,7 +69,7 @@ export function HeroOptimized() {
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
             className="mb-6 text-5xl md:text-6xl lg:text-7xl text-transparent bg-clip-text bg-gradient-to-r from-teal-600 via-teal-700 to-orange-600"
-            data-motion
+            style={{ opacity: 0 }}
           >
             Коррекционный сад
             <br />
@@ -81,7 +81,7 @@ export function HeroOptimized() {
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
             className="mb-8 max-w-3xl mx-auto"
-            data-motion
+            style={{ opacity: 0 }}
           >
             <p className="text-xl md:text-2xl text-gray-700 leading-relaxed">
               Специализированное учреждение для детей с особыми потребностями. 
@@ -94,7 +94,7 @@ export function HeroOptimized() {
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.5, ease: "easeOut" }}
             className="flex flex-col sm:flex-row gap-4 justify-center items-center"
-            data-motion
+            style={{ opacity: 0 }}
           >
             <Button 
               size="lg" 
